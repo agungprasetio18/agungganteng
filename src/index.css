@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  --color-primary: #E02020;
+  --color-bg-custom: #0F0F0F;
+  --color-card-custom: #1A1A1A;
+  --color-text-custom: #F5F5F5;
+  --color-text-dim: #999;
+  --color-accent-custom: #252525;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bg-custom text-text-custom antialiased font-sans;
+}
+
+/* Custom Utilities */
+.writing-mode-vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+.sleek-border-bottom {
+  border-bottom: 1px solid var(--color-accent-custom);
+}
+
+.sleek-border-top {
+  border-top: 1px solid var(--color-accent-custom);
+}
+
+.sleek-card {
+  @apply bg-card-custom rounded-lg border-t-3 border-accent-custom transition-all duration-300;
+}
+
+.sleek-card:hover {
+  @apply border-t-primary;
+}
